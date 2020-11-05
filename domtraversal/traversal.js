@@ -3,11 +3,11 @@
 
 const computerDataIds = []
 
-$(".generator").on("click", function (){
+$(".generator").on("click", function () {
     const getElementId = $(this).closest(".processor").attr("id")  
     const getBusNum = $(this).closest(".computer").find(".BUS").text()
     const getDataId = $(this).closest(".computer").data("id")
-    computerIds.push(getDataId)
+    computerDataIds.push(getDataId)
     console.log(getElementId)
     console.log(getBusNum)
     console.log(getDataId)    
