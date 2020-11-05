@@ -14,22 +14,35 @@ $("#theButton").on("click", function(){
 
 //////////////exercise 4
 
-(function($) {
-    $.fn.getAttributes = function() {
-        var attributes = {}; 
-
-        if( this.length ) {
-            $.each( this[0].attributes, function( index, attr ) {
-                attributes[ attr.name ] = attr.value;
-            } ); 
-        }
-
-        return attributes;
-    };
-console.log($('.item').getAttributes())
 
 
+$(".item").on("click", function(){
+    if($(this).data().instock){
+        console.log(true)
+        const text = $(this).text()
+        const chosedItem= $(`<div class=cart-item>${text}</div> `)
+        $("#cart").append(chosedItem)
+    }
 })
+
+
+
+// (function($) {
+//     $.fn.getAttributes = function() {
+//         var attributes = {}; 
+
+//         if( this.length ) {
+//             $.each( this[0].attributes, function( index, attr ) {
+//                 attributes[ attr.name ] = attr.value;
+//             } ); 
+//         }
+
+//         return attributes;
+//     };
+// console.log($('.item').getAttributes())
+
+
+// })
 
 // for (let i =0; i<3; i++){
 //         console.log($(".item").getAttributes())
